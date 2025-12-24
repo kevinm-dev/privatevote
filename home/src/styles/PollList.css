@@ -1,0 +1,86 @@
+.poll-cards {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.poll-card {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+  font-family: inherit;
+  color: inherit;
+}
+
+.poll-card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 12px 24px rgba(224, 75, 42, 0.15);
+  transform: translateY(-2px);
+}
+
+.poll-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.poll-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--coal);
+}
+
+.poll-status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.poll-status.live {
+  background: rgba(224, 75, 42, 0.15);
+  color: var(--accent-dark);
+}
+
+.poll-status.scheduled {
+  background: rgba(217, 231, 249, 0.8);
+  color: #2a4b7c;
+}
+
+.poll-status.ended {
+  background: rgba(22, 19, 15, 0.08);
+  color: rgba(22, 19, 15, 0.6);
+}
+
+.poll-status.finalized {
+  background: rgba(212, 242, 231, 0.9);
+  color: #1d7b56;
+}
+
+.poll-status.published {
+  background: rgba(22, 19, 15, 0.9);
+  color: #fefcf9;
+}
+
+.poll-meta {
+  margin: 0 0 0.6rem;
+  color: rgba(22, 19, 15, 0.65);
+  font-size: 0.85rem;
+}
+
+.poll-times {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: rgba(22, 19, 15, 0.6);
+}
